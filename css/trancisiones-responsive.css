@@ -1,0 +1,113 @@
+.contenedor {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+header > *, .portada > * {
+	border: 1px solid red;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #273b47;
+	color: white;
+	position: relative;
+	height: 50px;
+}
+
+img {
+	transition: .5s;
+}
+
+.logo {
+	width: 40%;
+}
+
+.banner, .menu {
+	width: 30%;
+}
+
+.banner {
+	background-color: lightgray;
+	color: black;
+	height: inherit;
+	position: absolute;
+	left: 40%;
+	top: 0;
+	transition: .5s;
+}
+
+.menu {
+	position: absolute;
+	height: inherit;
+	background-color: purple;
+	transition: .5s;
+	left: 70%;
+	top: 0;
+}
+
+.portada {
+	display: flex;
+}
+
+.col1 {
+	width: 70%;
+	margin-top: 0;
+	background: lightblue;
+	transition: .5s;
+}
+
+.col2 {
+	width: 30%;
+	position: relative;
+	top: 0;
+	transition: .5s;
+}
+
+@media screen and (max-width: 768px) {
+	.banner {
+		left: 70%;
+		top: 50px;
+	}
+	.col2 {
+		top: 50px;
+	}
+	img {
+		transform: rotate(360deg);
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.menu {
+		left: 0;
+		top: 50px;
+		width: 70%;
+	}
+	.col1 {
+		margin-top: 50px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.col1, .col2 {
+		width: auto;
+	}
+	.menu, .banner, .col1, .col2 {
+		width: 100%;
+	}
+	.banner {
+		top: 100px;
+		left: 0;
+	}
+	.portada {
+		display: block;
+	}
+	.col1 {
+		margin-top: 100px;
+	}
+	.col2 {
+		top: 0;
+	}
+}
